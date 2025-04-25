@@ -100,7 +100,7 @@ public class MoveForward : MonoBehaviour
             minX = terrainPos.x;
             maxX = terrainPos.x + _terrainSize.x;
         }
-        // Sinon, garde les anciennes limites (pas de reset)
+        
     }
 
     public void SetVerticalInput(int direction) => verticalInput = direction;
