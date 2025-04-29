@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour
     public float pollution = 0f;
     public float maxPollution = 100f;
     public Slider pollutionSlider;
-    private List<int> pollutionMilestonesReached = new List<int>();
+    private bool isPollutionKillingFish; // Booléen pour contrôler la désactivation
+    private float fishKillTimer; // Timer pour le délai entre les désactivations
 
     // Scene Transition
     public string apocalypseSceneName = "ApocalypseScene";
@@ -74,7 +75,26 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        CheckPollutionMilestone();
+        // Désactive les poissons progressivement si pollution > 0
+        if (pollution > 0f)
+        {
+            if (!isPollutionKillingFish)
+            {
+                isPollutionKillingFish = true;
+                fishKillTimer = 0f; // Reset le timer
+            }
+
+            fishKillTimer += Time.deltaTime;
+            if (fishKillTimer >= 2f) // Toutes les 2 secondes
+            {
+                FlockManager.FM.DisableActiveFish(2); // Désactive 2 poissons
+                fishKillTimer = 0f; // Reset le timer
+            }
+        }
+        else
+        {
+            isPollutionKillingFish = false; // Arrête si pollution = 0
+        }
 
         if (pollution >= maxPollution && !isTransitioning)
         {
@@ -90,16 +110,6 @@ public class GameManager : MonoBehaviour
         if (pollution >= maxPollution)
         {
             StartApocalypseTransition();
-        }
-    }
-
-    void CheckPollutionMilestone()
-    {
-        int percentage = Mathf.FloorToInt((pollution / maxPollution) * 100);
-        if (percentage > 0 && percentage % 20 == 0 && !pollutionMilestonesReached.Contains(percentage))
-        {
-            pollutionMilestonesReached.Add(percentage);
-            FlockManager.FM.DisableActiveFish(3);
         }
     }
 

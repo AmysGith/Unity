@@ -8,6 +8,7 @@ public class PauseToggle : MonoBehaviour
     public GameObject pauseButton;
     public GameObject playButton;
     public GameObject replayButton;
+    public GameObject quitButton;
 
     private bool isPaused = false;
 
@@ -31,7 +32,11 @@ public class PauseToggle : MonoBehaviour
         Debug.Log("REPLAY SCENE CALLED");
         Time.timeScale = 1f; 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
+    public void quit()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
 }

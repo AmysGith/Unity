@@ -25,7 +25,7 @@ public class TileSystem : MonoBehaviour
     void Awake()
     {
         if (!ValidateConfiguration()) return;
-        nextSpawnZ = player.position.z;
+        nextSpawnZ = player.position.z - 5;
         SpawnInitialTiles();
     }
 
