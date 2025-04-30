@@ -14,6 +14,7 @@ ScriptsOnlyBuild:
     - Recyclable
     - SceneChanger
     - SpawnManager
+    - TileMessageUI
     - TileSystem
     - WaterColorEffect
     Unity.Postprocessing.Runtime.dll:
@@ -69,6 +70,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
   serializedClasses:
     Assembly-CSharp:
+    - ObjectPooler/PooledObject
     - TileSystem/PhaseSettings
     Unity.Postprocessing.Runtime:
     - UnityEngine.Rendering.PostProcessing.BoolParameter
@@ -129,12 +131,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
-  - assembly: Assembly-CSharp
-    fullTypeName: MoveForward
-    methodName: SetVerticalInput
-  - assembly: Assembly-CSharp
-    fullTypeName: MoveForward
-    methodName: SetVerticalInput
   - assembly: Assembly-CSharp
     fullTypeName: MoveForward
     methodName: SetHorizontalInput
@@ -205,19 +201,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18042}
     - Class: 114
-      Script: {instanceID: 19914}
+      Script: {instanceID: 19916}
     - Class: 114
-      Script: {instanceID: 20058}
+      Script: {instanceID: 20060}
     - Class: 114
-      Script: {instanceID: 20930}
+      Script: {instanceID: 20932}
     - Class: 114
-      Script: {instanceID: 21416}
+      Script: {instanceID: 21418}
     - Class: 114
-      Script: {instanceID: 22334}
+      Script: {instanceID: 22336}
     - Class: 114
-      Script: {instanceID: 22472}
+      Script: {instanceID: 22474}
     - Class: 114
-      Script: {instanceID: 22756}
+      Script: {instanceID: 22758}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 137
@@ -280,23 +276,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18042}
     - Class: 114
-      Script: {instanceID: 18356}
+      Script: {instanceID: 18358}
     - Class: 114
-      Script: {instanceID: 19374}
+      Script: {instanceID: 19376}
     - Class: 114
-      Script: {instanceID: 19632}
+      Script: {instanceID: 19634}
     - Class: 114
-      Script: {instanceID: 20352}
+      Script: {instanceID: 20354}
     - Class: 114
-      Script: {instanceID: 20614}
+      Script: {instanceID: 20616}
     - Class: 114
-      Script: {instanceID: 20930}
+      Script: {instanceID: 20932}
     - Class: 114
-      Script: {instanceID: 21088}
+      Script: {instanceID: 21090}
     - Class: 114
-      Script: {instanceID: 21416}
+      Script: {instanceID: 21418}
     - Class: 114
-      Script: {instanceID: 23080}
+      Script: {instanceID: 23082}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -371,47 +367,49 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18042}
     - Class: 114
-      Script: {instanceID: 18356}
+      Script: {instanceID: 18092}
     - Class: 114
-      Script: {instanceID: 18442}
+      Script: {instanceID: 18358}
     - Class: 114
-      Script: {instanceID: 18470}
+      Script: {instanceID: 18444}
     - Class: 114
-      Script: {instanceID: 18530}
+      Script: {instanceID: 18472}
     - Class: 114
-      Script: {instanceID: 18922}
+      Script: {instanceID: 18532}
     - Class: 114
-      Script: {instanceID: 18930}
+      Script: {instanceID: 18924}
     - Class: 114
-      Script: {instanceID: 19006}
+      Script: {instanceID: 18932}
     - Class: 114
-      Script: {instanceID: 19914}
+      Script: {instanceID: 19008}
     - Class: 114
-      Script: {instanceID: 20058}
+      Script: {instanceID: 19916}
     - Class: 114
-      Script: {instanceID: 20082}
+      Script: {instanceID: 20060}
     - Class: 114
-      Script: {instanceID: 20278}
+      Script: {instanceID: 20084}
     - Class: 114
-      Script: {instanceID: 20382}
+      Script: {instanceID: 20280}
     - Class: 114
-      Script: {instanceID: 20800}
+      Script: {instanceID: 20384}
     - Class: 114
-      Script: {instanceID: 20930}
+      Script: {instanceID: 20802}
     - Class: 114
-      Script: {instanceID: 21416}
+      Script: {instanceID: 20932}
     - Class: 114
-      Script: {instanceID: 21654}
+      Script: {instanceID: 21418}
     - Class: 114
-      Script: {instanceID: 21864}
+      Script: {instanceID: 21656}
     - Class: 114
-      Script: {instanceID: 22142}
+      Script: {instanceID: 21866}
     - Class: 114
-      Script: {instanceID: 22472}
+      Script: {instanceID: 22144}
     - Class: 114
-      Script: {instanceID: 22756}
+      Script: {instanceID: 22474}
     - Class: 114
-      Script: {instanceID: 23098}
+      Script: {instanceID: 22758}
+    - Class: 114
+      Script: {instanceID: 23100}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -643,6 +641,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 1572389252ce4422dcda5950cda31035
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TileMessageUI
   - hash:
       serializedVersion: 2
       Hash: 8e6dc3d79712ca4934f6d50c80f010b1
@@ -993,7 +997,7 @@ ScriptsOnlyBuild:
     className: UnityOnEndDragMessageListener
   - hash:
       serializedVersion: 2
-      Hash: d49adc3e4ed8f7f01765811b18e7ca4a
+      Hash: 988f03f1113217fddd502b26a5f0dcf4
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ObjectPooler

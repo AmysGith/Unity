@@ -451,11 +451,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsToPool:
   - prefab: {fileID: 6916857990683244792, guid: e59443bfcbb8a264cbabff0d5ac746b9, type: 3}
-    poolSize: 5
+    poolSize: 10
   - prefab: {fileID: 6469908268213721478, guid: 6def4a13ddab3214797ed0c5dbdebd05, type: 3}
-    poolSize: 5
+    poolSize: 10
   - prefab: {fileID: 5172228735261015191, guid: 5686eada42f354745bf7beddb9e69ec8, type: 3}
-    poolSize: 5
+    poolSize: 10
 --- !u!4 &163528073
 Transform:
   m_ObjectHideFlags: 0
@@ -1428,7 +1428,7 @@ MonoBehaviour:
   apocalypseSceneName: Fin
   fadeOverlay: {fileID: 1348560874}
   fadeDuration: 2
-  distanceThreshold: 100
+  distanceThreshold: 50
   extremePhaseTriggered: 0
 --- !u!1 &1034798285
 GameObject:
@@ -1645,8 +1645,12 @@ MonoBehaviour:
   notificationImage: {fileID: 733112198}
   notificationSprites:
   - {fileID: 21300000, guid: 334dbedca0bcd2a40af517b1b102d4e1, type: 3}
-  - {fileID: 21300000, guid: 78747e1e43bd63a429e22a4e36765e75, type: 3}
   - {fileID: 21300000, guid: 6995fd636c912cb46b67e9649272111d, type: 3}
+  - {fileID: 21300000, guid: 85d253eee23ff7c44bf84c68b55a3641, type: 3}
+  - {fileID: 21300000, guid: 78747e1e43bd63a429e22a4e36765e75, type: 3}
+  - {fileID: 21300000, guid: 2b8294a532aee9a40a365406efcccfdd, type: 3}
+  - {fileID: 21300000, guid: e6d18f5bcbd1a32409e534a12ba99de9, type: 3}
+  - {fileID: 21300000, guid: 2b54ad9dce851494eaa1ed905581bc32, type: 3}
   slideDuration: 1
 --- !u!4 &1099679430
 Transform:
@@ -1918,9 +1922,18 @@ MonoBehaviour:
     tilePrefabs:
     - {fileID: 3276406181037043696, guid: edcc7bf9b754abc438b3a59eabbef465, type: 3}
     - {fileID: 5873033824438899276, guid: f7c032e8d7b93a043b9d19fc3f59c592, type: 3}
+    - {fileID: 5873033824438899276, guid: f7c032e8d7b93a043b9d19fc3f59c592, type: 3}
+    - {fileID: 3276406181037043696, guid: edcc7bf9b754abc438b3a59eabbef465, type: 3}
   - name: Pollue
     tilePrefabs:
     - {fileID: 2544562534665449511, guid: 5d4602bc8cb73fb4ebf7bbd2be521da5, type: 3}
+    - {fileID: 3492581422940826607, guid: 9fd697f54da36f44a82e88a9c717868c, type: 3}
+    - {fileID: 2544562534665449511, guid: 5d4602bc8cb73fb4ebf7bbd2be521da5, type: 3}
+    - {fileID: 3492581422940826607, guid: 9fd697f54da36f44a82e88a9c717868c, type: 3}
+  - name: Pollue
+    tilePrefabs:
+    - {fileID: 2544562534665449511, guid: 5d4602bc8cb73fb4ebf7bbd2be521da5, type: 3}
+    - {fileID: 3492581422940826607, guid: 9fd697f54da36f44a82e88a9c717868c, type: 3}
     - {fileID: 3492581422940826607, guid: 9fd697f54da36f44a82e88a9c717868c, type: 3}
   tileLength: 35
   player: {fileID: 1294028698}

@@ -29,7 +29,6 @@ public class TileSystem : MonoBehaviour
         messageUI = FindObjectOfType<TileMessageUI>();
     }
 
-
     void Awake()
     {
         if (!ValidateConfiguration()) return;
@@ -37,13 +36,19 @@ public class TileSystem : MonoBehaviour
         SpawnInitialTiles();
     }
 
-
     bool ValidateConfiguration()
     {
-        // Vérification du nombre de phases et de prefabs
-        if (phases.Length != 3 || phases[0].tilePrefabs.Length != 2)
+        // Vérification du nombre de phases (minimum 3)
+        if (phases.Length < 3)
         {
-            Debug.LogError("Configurez 3 phases avec 2 prefabs chacune!");
+            Debug.LogError("Configurez au moins 3 phases!");
+            return false;
+        }
+
+        // La première phase doit avoir exactement 2 prefabs
+        if (phases[0].tilePrefabs.Length != 2)
+        {
+            Debug.LogError("La première phase doit avoir exactement 2 prefabs!");
             return false;
         }
 
@@ -60,7 +65,6 @@ public class TileSystem : MonoBehaviour
             }
         }
 
-        // Si tout est valide
         return true;
     }
 
@@ -68,17 +72,14 @@ public class TileSystem : MonoBehaviour
     {
         if (currentPhaseIndex >= phases.Length || activeTiles.Count == 0) return;
 
-        // Progression du joueur par rapport à la première tuile active
         float playerProgress = (player.position.z - activeTiles.Peek().transform.position.z) / tileLength;
 
-        // Spawn de la prochaine tuile quand le joueur atteint le seuil
         if (!hasSpawnedNext && playerProgress > spawnThreshold)
         {
             SpawnNextTile();
             hasSpawnedNext = true;
         }
 
-        // Désactivation de la tuile la plus ancienne seulement quand le joueur a dépassé 2 tuiles
         if (playerProgress > 2f && activeTiles.Count > 2)
         {
             RemoveOldestTile();
@@ -88,7 +89,6 @@ public class TileSystem : MonoBehaviour
 
     void SpawnInitialTiles()
     {
-        // Spawn 2 tuiles au départ
         for (int i = 0; i < 2; i++)
         {
             SpawnNextTile();
@@ -99,6 +99,27 @@ public class TileSystem : MonoBehaviour
     {
         if (currentPhaseIndex >= phases.Length) return;
 
+        // Logique différente pour la première phase
+        if (currentPhaseIndex == 0)
+        {
+            // Phase 0: alternance stricte entre 2 tuiles
+            currentVariantIndex = (currentVariantIndex + 1) % 2;
+
+            // Si on revient à l'index 0, on passe à la phase suivante
+            if (currentVariantIndex == 0) currentPhaseIndex++;
+        }
+        else
+        {
+            // Phases 1 et 2: on utilise tous les prefabs disponibles
+            currentVariantIndex = (currentVariantIndex + 1) % phases[currentPhaseIndex].tilePrefabs.Length;
+
+            // On ne passe à la phase suivante que si ce n'est pas la dernière phase
+            if (currentVariantIndex == 0 && currentPhaseIndex < phases.Length - 1)
+            {
+                currentPhaseIndex++;
+            }
+        }
+
         GameObject newTile = Instantiate(
             phases[currentPhaseIndex].tilePrefabs[currentVariantIndex],
             new Vector3(0, 0, nextSpawnZ),
@@ -108,15 +129,10 @@ public class TileSystem : MonoBehaviour
         activeTiles.Enqueue(newTile);
         nextSpawnZ += tileLength;
 
-        // Alternance entre les variantes et passage à la phase suivante si nécessaire
-        currentVariantIndex = (currentVariantIndex + 1) % 2;
-        if (currentVariantIndex == 0) currentPhaseIndex++;
-
         if (messageUI != null)
         {
             messageUI.ShowNextMessage();
         }
-
     }
 
     void RemoveOldestTile()
@@ -127,4 +143,3 @@ public class TileSystem : MonoBehaviour
         oldest.SetActive(false);
     }
 }
-
