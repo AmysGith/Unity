@@ -4,7 +4,7 @@ public class Recyclable : MonoBehaviour
 {
     public float distanceAvantRecycle = 25.0f;
     private Transform player;
-    public float delayBeforeDestruction = 2.0f;
+    public float delayBeforeDestruction = 25.0f;
     private bool hasHitPlayer = false; // Nouvelle variable pour suivre si l'objet a déjà touché le joueur
 
     void Start()

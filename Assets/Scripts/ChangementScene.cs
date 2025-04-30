@@ -9,7 +9,7 @@ public class SceneChanger : MonoBehaviour
     void Start()
     {
        
-        StartCoroutine(ChangeSceneAfterDelay(5f));
+        StartCoroutine(ChangeSceneAfterDelay(30f));
     }
 
     

@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\PP.cs" />
     <Compile Include="Assets\Scripts\FinMenu.cs" />
     <Compile Include="Assets\Scripts\WaterColorEffect.cs" />
+    <Compile Include="Assets\Scripts\TEXT_TILE.cs" />
     <Compile Include="Assets\Scripts\FlockManager.cs" />
     <Compile Include="Assets\Scripts\FlockPooler.cs" />
     <Compile Include="Assets\Scripts\TilePooler.cs" />

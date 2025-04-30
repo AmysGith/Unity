@@ -373,6 +373,7 @@
 "Assets/Scripts/PP.cs"
 "Assets/Scripts/Recyclable.cs"
 "Assets/Scripts/SpawnManager.cs"
+"Assets/Scripts/TEXT_TILE.cs"
 "Assets/Scripts/TilePooler.cs"
 "Assets/Scripts/WaterColorEffect.cs"
 -langversion:9.0

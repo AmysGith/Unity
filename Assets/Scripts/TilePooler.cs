@@ -22,10 +22,18 @@ public class TileSystem : MonoBehaviour
     private float nextSpawnZ;
     private bool hasSpawnedNext = false;
 
+    private TileMessageUI messageUI;
+
+    void Start()
+    {
+        messageUI = FindObjectOfType<TileMessageUI>();
+    }
+
+
     void Awake()
     {
         if (!ValidateConfiguration()) return;
-        nextSpawnZ = player.position.z - 5;
+        nextSpawnZ = player.position.z - 10;
         SpawnInitialTiles();
     }
 
@@ -103,6 +111,12 @@ public class TileSystem : MonoBehaviour
         // Alternance entre les variantes et passage à la phase suivante si nécessaire
         currentVariantIndex = (currentVariantIndex + 1) % 2;
         if (currentVariantIndex == 0) currentPhaseIndex++;
+
+        if (messageUI != null)
+        {
+            messageUI.ShowNextMessage();
+        }
+
     }
 
     void RemoveOldestTile()

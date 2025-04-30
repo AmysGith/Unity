@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\NOMENAHITANTSOA\\MonProjetUnity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4CDD6872-BE01-27E2-F36E-8545E4145F4B}|Assembly-CSharp.csproj|c:\\users\\nomenahitantsoa\\monprojetunity\\assets\\scripts\\text.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CDD6872-BE01-27E2-F36E-8545E4145F4B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\text.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CDD6872-BE01-27E2-F36E-8545E4145F4B}|Assembly-CSharp.csproj|C:\\Users\\NOMENAHITANTSOA\\MonProjetUnity\\assets\\scripts\\tilepooler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CDD6872-BE01-27E2-F36E-8545E4145F4B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tilepooler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NOMENAHITANTSOA\\MonProjetUnity\\Assets\\Scripts\\TEXT.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\TEXT.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4CDD6872-BE01-27E2-F36E-8545E4145F4B}|Assembly-CSharp.csproj|C:\\Users\\NOMENAHITANTSOA\\MonProjetUnity\\assets\\scripts\\pp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4CDD6872-BE01-27E2-F36E-8545E4145F4B}|Assembly-CSharp.csproj|C:\\Users\\NOMENAHITANTSOA\\MonProjetUnity\\assets\\scripts\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CDD6872-BE01-27E2-F36E-8545E4145F4B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CDD6872-BE01-27E2-F36E-8545E4145F4B}|Assembly-CSharp.csproj|c:\\users\\nomenahitantsoa\\monprojetunity\\assets\\scripts\\tilepooler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CDD6872-BE01-27E2-F36E-8545E4145F4B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tilepooler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4CDD6872-BE01-27E2-F36E-8545E4145F4B}|Assembly-CSharp.csproj|C:\\Users\\NOMENAHITANTSOA\\MonProjetUnity\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,37 +78,39 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TEXT.cs",
               "DocumentMoniker": "C:\\Users\\NOMENAHITANTSOA\\MonProjetUnity\\Assets\\Scripts\\TEXT.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TEXT.cs",
               "ToolTip": "C:\\Users\\NOMENAHITANTSOA\\MonProjetUnity\\Assets\\Scripts\\TEXT.cs",
               "RelativeToolTip": "Assets\\Scripts\\TEXT.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAYwAcAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T16:51:12.583Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T16:51:12.583Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "TilePooler.cs",
               "DocumentMoniker": "C:\\Users\\NOMENAHITANTSOA\\MonProjetUnity\\Assets\\Scripts\\TilePooler.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TilePooler.cs",
               "ToolTip": "C:\\Users\\NOMENAHITANTSOA\\MonProjetUnity\\Assets\\Scripts\\TilePooler.cs",
               "RelativeToolTip": "Assets\\Scripts\\TilePooler.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAIwHEAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAIwG8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-16T14:48:39.9Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PP.cs",
               "DocumentMoniker": "C:\\Users\\NOMENAHITANTSOA\\MonProjetUnity\\Assets\\Scripts\\PP.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PP.cs",
@@ -116,8 +118,7 @@
               "RelativeToolTip": "Assets\\Scripts\\PP.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAYwCYAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T03:10:44.883Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T03:10:44.883Z"
             },
             {
               "$type": "Document",
@@ -133,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FinMenu.cs",
               "DocumentMoniker": "C:\\Users\\NOMENAHITANTSOA\\MonProjetUnity\\Assets\\Scripts\\FinMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FinMenu.cs",
@@ -141,8 +142,7 @@
               "RelativeToolTip": "Assets\\Scripts\\FinMenu.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T12:29:40.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T12:29:40.053Z"
             },
             {
               "$type": "Document",
@@ -170,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Controller.cs",
               "DocumentMoniker": "C:\\Users\\NOMENAHITANTSOA\\MonProjetUnity\\Assets\\Scripts\\Controller.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Controller.cs",
@@ -178,8 +178,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Controller.cs",
               "ViewState": "AgIAAF4AAAAAAAAAAAAUwGYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T14:10:32.345Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T14:10:32.345Z"
             },
             {
               "$type": "Document",
@@ -192,10 +191,6 @@
               "ViewState": "AgIAAAsAAAAAAAAAAAAIwBcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-24T04:12:27.895Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",

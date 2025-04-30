@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UIElements;
 
 public class MoveForward : MonoBehaviour
 {
@@ -8,18 +9,18 @@ public class MoveForward : MonoBehaviour
     public float extremeSlowSpeed = 2.0f;
     public float totalDistance = 0f;
 
-    private float verticalInput = 0f;
+
     private float horizontalInput = 0f;
     private float minX;
     private float maxX;
 
-    // Optimisation : cache le terrain courant
+    
     private Terrain _currentTerrain;
     private Vector3 _terrainSize;
 
     void Start()
     {
-        // Ne fait rien pour UpdateTerrainBounds ici, on gère ça dans Update proprement
+        UpdateSpeed();
     }
 
     void Update()
@@ -32,6 +33,7 @@ public class MoveForward : MonoBehaviour
                 return; // Tant qu'il n'y a pas de terrain actif, on ne fait rien
         }
 
+        
         UpdateSpeed();
         ProcessInputs();
         MovePlayer();
@@ -53,12 +55,7 @@ public class MoveForward : MonoBehaviour
 
     void ProcessInputs()
     {
-        // Gestion clavier
-        float keyboardVertical = Input.GetAxis("Vertical");
         float keyboardHorizontal = Input.GetAxis("Horizontal");
-
-        if (Mathf.Abs(keyboardVertical) > 0.1f)
-            verticalInput = keyboardVertical;
 
         if (Mathf.Abs(keyboardHorizontal) > 0.1f)
             horizontalInput = keyboardHorizontal;
@@ -66,7 +63,7 @@ public class MoveForward : MonoBehaviour
 
     void MovePlayer()
     {
-        Vector3 movement = new Vector3(horizontalInput, 0, verticalInput) * speed * Time.deltaTime;
+        Vector3 movement = new Vector3(horizontalInput, 0, 1f) * speed * Time.deltaTime;
         Vector3 newPosition = transform.position + movement;
 
         newPosition.x = Mathf.Clamp(newPosition.x, minX, maxX); // Clamp entre min et max du terrain
@@ -102,7 +99,5 @@ public class MoveForward : MonoBehaviour
         }
         
     }
-
-    public void SetVerticalInput(int direction) => verticalInput = direction;
     public void SetHorizontalInput(int direction) => horizontalInput = direction;
 }
